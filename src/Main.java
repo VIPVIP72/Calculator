@@ -108,7 +108,7 @@ public class Main {
             return convert(result);
         }
     }
-    private enum RomanNumeral {
+    enum RomanNumeral {
         I(1), II(2), III(3), IV(4), V(5), VI(6), VII(7), VIII(8), IX(9), X(10);
 
         private final int translation;
@@ -121,7 +121,7 @@ public class Main {
             return translation;
         }
     }
-    private static String convert(int number) {
+    static String convert(int number) {
 
         String romanOnes = romanDigit(number % 10, "I", "V", "X");
         number /= 10;
@@ -134,7 +134,7 @@ public class Main {
         String result = romanHundreds + romanTens + romanOnes;
         return result;
     }
-    private static String romanDigit(int n, String one, String five, String ten){
+    static String romanDigit(int n, String one, String five, String ten){
 
         if(n >= 1)
         {
@@ -150,7 +150,7 @@ public class Main {
             {
                 return one + one + one;
             }
-            else if (n == )
+            else if (n == 4)
             {
                 return one + five;
             }
